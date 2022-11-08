@@ -3,17 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 // COMPONENTS
 
-import { AuthMasterComponent } from '@auth/components/auth-master/auth-master.component';
-import { AuthLoginComponent } from '@auth/components/auth-login/auth-login.component';
+import { PostsMasterComponent } from '@posts/components/posts-master/posts-master.component';
+import { PostsRecordsComponent } from '@posts/components/posts-records/posts-records.component';
 
 const routes: Routes = [
   {
     path: '',
-    component : AuthMasterComponent,
+    component : PostsMasterComponent,
     children : [
       {
         path : 'login',
-        component : AuthLoginComponent
+        component : PostsRecordsComponent
       },
       {
         path : '**',

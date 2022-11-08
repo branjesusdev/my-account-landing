@@ -1,5 +1,5 @@
 
-export interface InAuthentication {
+export interface InPosts {
   idEntity: number;
   email:         string;
   password:      string;
@@ -7,11 +7,11 @@ export interface InAuthentication {
 
 // Converts JSON strings to/from your types
 export class Convert {
-  public static toInAuthentication(json: string): InAuthentication {
+  public static toInPosts(json: string): InPosts {
       return JSON.parse(json);
   }
 
-  public static inAuthenticationToJson(value: InAuthentication): string {
+  public static InPostsToJson(value: InPosts): string {
       return JSON.stringify(value);
   }
 }

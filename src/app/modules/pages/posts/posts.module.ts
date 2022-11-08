@@ -14,7 +14,7 @@ import { PostsRoutingModule } from '@posts/posts-routing.module';
 // COMPONENTS
 
 import { PostsMasterComponent } from '@posts/components/posts-master/posts-master.component';
-import { PostsRecordsComponent } from '@posts/components/posts-records/auth-login.component';
+import { PostsRecordsComponent } from '@posts/components/posts-records/posts-records.component';
 
 
 @NgModule({
