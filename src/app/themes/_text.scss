@@ -1,0 +1,27 @@
+@mixin text-primary {
+  color: var(--primary);
+  font-style: normal;
+}
+
+@mixin text-purple( $porcentage : 100) {
+  color: var(--purple-#{$porcentage});
+  font-style: normal;
+}
+
+@mixin text-ocean-green( $porcentage : 100) {
+  color: var(--ocean-green-#{$porcentage});
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: nunito_semibold;
+}
+
+.text-right {
+  float: right !important;
+}

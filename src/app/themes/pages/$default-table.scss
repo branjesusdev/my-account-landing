@@ -1,0 +1,52 @@
+@mixin table-sm {
+  .p-datatable-table {
+    font-size: 12px !important;
+
+    .p-sortable-column-icon {
+      font-size: 12px;
+    }
+
+    .p-datatable-thead {
+      input {
+        height: 1.8rem !important;
+        font-size: 12px !important;
+        min-width: 10rem;
+        &:nth-child(1), &:nth-child(2) {
+          min-width: 2rem;
+        }
+      }
+    }
+
+    .ph-pencil {
+      @include ph-icon;
+    }
+    .not-faund {
+      @apply text-lg text-center;
+    }
+  }
+}
+
+
+@mixin table-md {
+  .p-datatable-table {
+    font-size: 14px !important;
+
+    .p-sortable-column-icon {
+      font-size: 14px;
+    }
+
+    .p-datatable-thead {
+      input {
+        height: 2rem !important;
+        font-size: 14px !important;
+      }
+    }
+
+    .ph-pencil {
+      @include ph-icon;
+    }
+    .not-faund {
+      @apply text-lg text-center;
+    }
+  }
+}

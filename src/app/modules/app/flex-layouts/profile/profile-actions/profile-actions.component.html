@@ -1,0 +1,34 @@
+<article class="app-profile-actions">
+
+  <picture routerLink="/profile/general-view" routerLinkActive="activate">
+    <div>
+      <span class="ph-user-circle"></span>
+    </div>
+    <h5>Vista general de la cuenta</h5>
+  </picture>
+
+  <picture routerLink="/profile/edit-profile" routerLinkActive="activate" #home="routerLinkActive">
+    <div>
+      <i class="bage" *ngIf="!home.isActive"></i>
+      <span class="ph-navigation-arrow"></span>
+    </div>
+    <h5>Posts jsonplaceholder</h5>
+  </picture>
+
+  <picture class="disabled">
+    <div>
+      <i class="bage"></i>
+      <span class="ph-lock-key"></span>
+    </div>
+    <h5>Cambio de contraseña</h5>
+  </picture>
+
+  <picture>
+    <div>
+      <i class="bage"></i>
+      <span class="ph-bell"></span>
+    </div>
+    <h5>configuración de notificaciones</h5>
+  </picture>
+
+</article>

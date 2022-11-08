@@ -1,0 +1,13 @@
+
+@mixin ph-icon($background : var(--ocean-green-5), $color : var(--gray-100)) {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: $background;
+  color: $color;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}

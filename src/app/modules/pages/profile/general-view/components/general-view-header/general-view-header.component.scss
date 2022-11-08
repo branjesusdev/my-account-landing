@@ -1,0 +1,10 @@
+@import 'styles.scss';
+
+section.app-general-view-header {
+  @include default-content;
+
+  h1 {
+    font-family: nunito_bold;
+    font-size: 21px;
+  }
+}

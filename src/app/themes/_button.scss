@@ -1,0 +1,108 @@
+@use "sass:meta";
+
+@mixin button(
+  $background: var(--primary),
+  $color: var(--primary),
+  $border: var(--primary),
+  $radius: 28.5px,
+  $type: false, // true : background - false: border
+  $hover: var(--purple-80),
+  $pressed-bg : var(--primary),
+  $pressed-color : var(--white),
+) {
+
+  border-radius: $radius;
+  border: 1px solid $border;
+  background-color: $background;
+  color: $color !important;
+  box-sizing: border-box;
+  transition: 0.3s all;
+  font-weight: 600 !important;
+  text-align: center;
+  box-shadow: none !important;
+
+
+  &:disabled {
+    background-color: var(--gray-205) !important;
+    border: none !important;
+  }
+
+  &:not(:disabled):hover {
+    @if $type {
+      background-color: $hover !important;
+      border: 1px solid $border;
+    } @else {
+      border: 1px solid $hover !important;
+      background-color: var(--white) !important;
+      color: $hover !important;
+    }
+  }
+
+  &:not(:disabled):active,
+  &:not(:disabled):focus {
+    border: 1px solid $border;
+    background-color: $pressed-bg !important;
+    color: $pressed-color !important;
+  }
+
+  // RESPONSIVE PHONES
+
+  padding: 10px;
+  height: 48px;
+  font-size: 18px;
+
+}
+
+// MIXIN
+
+@mixin button-filled() {
+
+  @include button(
+    $background : var(--button-filled-bg),
+    $color : var(--button-filled-color),
+    $border : var(--button-filled-bg),
+    $radius : 8px,
+    $type : true,
+    $hover : var(--button-filled-hover),
+    $pressed-bg : var(--button-filled-pressed)
+    )
+}
+
+@mixin button-outlined() {
+  @include button(
+    $background : var(--button-outlined-bg),
+    $color : var(--button-outlined-color),
+    $border : var(--button-outlined-border),
+    $radius : 8px,
+    $type : false,
+    $hover : var(--button-outlined-hover),
+    $pressed-bg : var(--button-outlined-pressed-bg),
+    $pressed-color : var(--button-outlined-pressed-color)
+    )
+}
+
+
+
+@mixin button-text-transparent($color: var(--primary)) {
+  @include button(
+    $background : transparent,
+    $color : $color,
+    $border : transparent,
+    $radius : 8px,
+    $type : false,
+    $hover : transparent,
+    $pressed-bg : transparent,
+    $pressed-color : transparent
+    );
+    font-family: nunito_semibold;
+}
+
+// CLASS
+
+.btn-filled {
+  @include button-filled;
+}
+
+.btn-outlined {
+  @include button-outlined;
+}

@@ -1,0 +1,156 @@
+<section class="dialog-users-add-edit">
+  <p-card *ngIf="form">
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()" >
+
+      <div class="row">
+        <div class="col-md-3 field">
+          <label for="firstName" class="block">Nombres</label>
+          <input type="text" pInputText placeholder="Eje: Carlos" formControlName="firstName" autofocus/>
+          <span *ngIf="campoNoValido('firstName')">
+            Nombres no válidos, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="lastName" class="block">Apellidos</label>
+          <input type="text" pInputText placeholder="Eje: Rios" formControlName="lastName" />
+          <span *ngIf="campoNoValido('lastName')">
+            Apellidos no válidos, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="idRol" class="block">Rol</label>
+          <p-dropdown [autoDisplayFirst]="false" optionLabel="name" optionValue="id" [showClear]="true" [filter]="true" filterBy="name"
+            placeholder="Selecciona" formControlName="idRol" [options]="listRols"></p-dropdown>
+          <span *ngIf="campoNoValido('idRol')">
+            Selecciona un Rol
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="phone" class="block">Celular</label>
+          <p-inputMask mask="(999) 999-9999" formControlName="phone" placeholder="(999) 999-9999"></p-inputMask>
+          <span *ngIf="campoNoValido('phone')">
+            Celular no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="email" class="block">Correo</label>
+          <input type="text" pInputText placeholder="correoinstitucional@mdn.com" formControlName="email" />
+          <span *ngIf="campoNoValido('email')">
+            Correo no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="documentId" class="block">Tipo de documento</label>
+          <p-dropdown [autoDisplayFirst]="false" optionLabel="name" [showClear]="true" [filter]="true" filterBy="name"
+            placeholder="Selecciona" formControlName="documentId" [options]="listTypeDocuments" optionValue="id"></p-dropdown>
+          <span *ngIf="campoNoValido('documentId')">
+            Selecciona un tipo
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="document" class="block">Documento</label>
+          <p-inputNumber placeholder="1225623231354" formControlName="document" mode="decimal" [useGrouping]="false"></p-inputNumber>
+          <span *ngIf="campoNoValido('document')">
+            Documento no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="idEntity" class="block">Fuerza pública</label>
+          <p-dropdown [autoDisplayFirst]="false" optionLabel="nameEntity" [showClear]="true" [filter]="true" filterBy="nameEntity"
+            placeholder="Selecciona" formControlName="entidadFk" [options]="listEntitys" optionValue="idEntity"></p-dropdown>
+          <span *ngIf="campoNoValido('idEntity')">
+            Selecciona un tipo
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="grade" class="block">Grado</label>
+          <input type="text" pInputText placeholder="Eje: Sub primero" formControlName="grade" />
+          <span *ngIf="campoNoValido('grade')">
+            Grado no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="unit" class="block">Unidad</label>
+          <input type="text" pInputText placeholder="Eje: Riegos" formControlName="unit" />
+          <span *ngIf="campoNoValido('unit')">
+            Unidad no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="position" class="block">Posición</label>
+          <input type="text" pInputText placeholder="Eje: Auxiliar" formControlName="position" />
+          <span *ngIf="campoNoValido('position')">
+            Posición no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="directionGroup" class="block">Dirección de grupo</label>
+          <input type="text" pInputText placeholder="Eje: Auxiliar" formControlName="directionGroup" />
+          <span *ngIf="campoNoValido('directionGroup')">
+            Campo no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="contactPerson" class="block">Persona de contacto</label>
+          <input type="text" pInputText placeholder="Eje: Alfonso Rincon" formControlName="contactPerson" />
+          <span *ngIf="campoNoValido('contactPerson')">
+            Persona de contacto no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="responsible" class="block">Responsable</label>
+          <input type="text" pInputText placeholder="Eje: Steven Amaya" formControlName="responsible" />
+          <span *ngIf="campoNoValido('responsible')">
+            Responsable no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="coResponsible" class="block">co-responsible</label>
+          <input type="text" pInputText placeholder="Eje: Fabio Lozano" formControlName="coResponsible" />
+          <span *ngIf="campoNoValido('coResponsible')">
+            coResponsible no válido, ingresa un valor correcto
+          </span>
+        </div>
+
+
+
+      </div>
+
+      <div class="row" *ngIf="textButtonSubmit == 'Actualizar'">
+        <div class="col-md-3 field">
+          <label for="coResponsible" class="block">Estado del usuario</label>
+          <p-selectButton formControlName="activate" [options]="statusUser" optionLabel="name" optionValue="id"></p-selectButton>
+        </div>
+
+        <div class="col-md-3 field">
+          <label for="coResponsible" class="block">Usuario Vigente</label>
+          <p-selectButton formControlName="vigent" [options]="validUser" optionLabel="name" optionValue="id"></p-selectButton>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field" *ngIf="!_SPINNER.spinnerStatus">
+          <button type="submit" class="btn-primary " pButton pRipple [label]="textButtonSubmit" [disabled]="form.invalid"></button>
+          <button type="button" class="btn-second" pButton pRipple label="Volver" (click)="exitPopup()"></button>
+        </div>
+      </div>
+
+    </form>
+
+  </p-card>
+</section>

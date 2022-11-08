@@ -1,0 +1,8 @@
+@import 'styles.scss';
+
+:host ::ng-deep {
+  #app-statistics-master {
+    @include titleCard;
+  }
+
+}

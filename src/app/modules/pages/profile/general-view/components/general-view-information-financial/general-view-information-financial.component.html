@@ -1,0 +1,56 @@
+<section class="app-general-view-information-financial">
+  <h1>Información financiera</h1>
+
+  <form action="">
+    <div class="field">
+      <label for="Ocupación"></label>
+      <div class="grid grid-cols-1">
+        <div class="field-radiobutton">
+          <input name="ocupacion" type="radio">
+          <span>Estudiante</span>
+        </div>
+        <div class="field-radiobutton">
+          <input name="ocupacion" type="radio">
+          <span>Empleado</span>
+        </div>
+        <div class="field-radiobutton">
+          <input name="ocupacion" type="radio">
+          <span>Independiente</span>
+        </div>
+        <div class="field-radiobutton">
+          <input name="ocupacion" type="radio">
+          <span>Pensionado</span>
+        </div>
+        <div class="field-radiobutton">
+          <input name="ocupacion" type="radio">
+          <span>Otro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="">Nivel de educación</label>
+      <p-dropdown [options]="[{name : 'Postgrado'}]" optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="field">
+      <label for="">Actividad laboral</label>
+      <p-dropdown [options]="[{name : 'Tecnología'}]" optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="field">
+      <label for="">Ingresos promedios mensuales</label>
+      <p-dropdown [options]="[{name : 'Entre 2.000.000 y 3.000.000'}]" optionLabel="name"></p-dropdown>
+    </div>
+
+    <div class="field">
+      <label for="">Gastos promedios mensuales</label>
+      <p-dropdown [options]="[{name : 'Entre 1.500.000 y 2.000.000'}]" optionLabel="name"></p-dropdown>
+    </div>
+
+
+    <div class="field submit">
+      <button pButton pRipple label="Editar"></button>
+    </div>
+  </form>
+</section>

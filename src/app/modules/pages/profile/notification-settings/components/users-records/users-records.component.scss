@@ -1,0 +1,9 @@
+@import "styles.scss";
+
+:host ::ng-deep {
+  #app-users-records {
+    @apply mt-7;
+
+    @include table-sm;
+  }
+}

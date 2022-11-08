@@ -1,0 +1,48 @@
+@import 'styles.scss';
+
+:host ::ng-deep {
+  section.app-general-view-information-person {
+    @include default-content;
+
+    h1 {
+      font-family: nunito_regular;
+      font-size: 20px;
+      color: var(--primary);
+    }
+
+    form {
+      @apply mt-3;
+
+      .field {
+        @apply mt-5;
+      }
+
+      .p-selectbutton {
+        display: flex;
+        justify-content: center;
+        .p-button {
+          @apply mx-4;
+          border-radius: 8px;
+          border-right: 1px solid var(--input-outline);
+        }
+      }
+
+      .p-dropdown {
+        min-width: 8rem;
+        height: 2.5rem;
+        img {
+          width: 20px;
+          height: 15px;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .submit {
+        button {
+          @include button-filled;
+          @apply w-full;
+        }
+      }
+    }
+  }
+}

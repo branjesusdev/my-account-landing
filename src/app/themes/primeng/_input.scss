@@ -1,0 +1,74 @@
+:host ::ng-deep {
+  .p-dropdown,
+  .p-inputtext,
+  .p-inputnumber,
+  p-inputnumber {
+    @apply w-full;
+  }
+
+  .p-calendar {
+    width: 100%;
+    input {
+      height: 2.5rem !important;
+      border-right: 0;
+    }
+    button {
+      height: 2.5rem !important;
+      background-color: white !important;
+      color: black;
+      border-top: 1px solid var(--input-outline);
+      border-right: 1px solid var(--input-outline);
+      border-bottom: 1px solid var(--input-outline);
+    }
+  }
+
+  .p-inputtext:not(.p-dropdown-label, .ng-dirty.ng-invalid):enabled:focus {
+    border-color: var(--input-focus) !important;
+    box-shadow: 0 0 0 0.02rem var(--input-focus) !important;
+  }
+
+  .p-inputtext:not(.p-dropdown-label):hover {
+    box-shadow: 0 0 0 0.03rem var(--input-focus) !important;
+  }
+
+  .p-inputtext.ng-dirty.ng-invalid {
+    border-color: var(--input-error) !important;
+    box-shadow: 0 0 0 0.02rem var(--input-error) !important;
+  }
+
+  .field {
+    margin-top: 2vmin;
+    position: relative;
+
+    & > span.message-control {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--span-error);
+      display: flex;
+      justify-content: left;
+      gap: 4px;
+      margin-top: 10px;
+    }
+  }
+
+  input {
+    border: 1px solid var(--input-outline);
+    width: 100%;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+
+    // RESPONSIVE PHONES
+
+    padding: 0.45rem 0.75rem !important;
+
+  }
+
+  label {
+    font-family: nunito_bold !important;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+    color: var(--primary);
+  }
+}

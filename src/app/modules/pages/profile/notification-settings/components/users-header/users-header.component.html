@@ -1,0 +1,10 @@
+<article id="app-users-header">
+  <h1 class="title">Usuarios</h1>
+  <button
+    *ngIf="permitCreated"
+    pButton
+    pRipple
+    label="Crear usuario"
+    (click)="addUser()"
+  ></button>
+</article>

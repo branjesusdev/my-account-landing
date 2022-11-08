@@ -1,0 +1,25 @@
+::ng-deep {
+
+  p-inputmask.ng-dirty.ng-invalid > .p-inputtext {
+    border-color: var(--input-error);
+  }
+
+  p-inputnumber.ng-dirty.ng-invalid > .p-inputnumber > .p-inputtext {
+    border-color: var(--input-error);
+  }
+
+  p-dropdown.ng-dirty.ng-invalid > .p-dropdown {
+    border-color: var(--input-error);
+  }
+
+  .p-dropdown:not(.p-disabled).p-focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.02rem var(--primary) !important;
+  }
+
+  .p-dropdown-filter.p-inputtext:focus {
+    border-color: var(--input-focus) !important;
+    box-shadow: 0 0 0 0.02rem var(--input-focus) !important;
+  }
+
+}

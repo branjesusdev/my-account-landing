@@ -1,0 +1,8 @@
+@mixin default-content {
+
+  @apply mx-2 my-3 p-3;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 2px 2px 6px var(--black--200);
+  border-radius: 8px;
+
+}

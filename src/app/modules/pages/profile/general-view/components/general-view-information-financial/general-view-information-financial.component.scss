@@ -1,0 +1,43 @@
+@import "styles.scss";
+
+:host ::ng-deep {
+  section.app-general-view-information-financial {
+    @include default-content;
+
+    h1 {
+      font-family: nunito_regular;
+      font-size: 20px;
+      color: var(--primary);
+    }
+
+    form {
+      @apply mt-3;
+
+      .field-radiobutton {
+        @apply grid grid-flow-col;
+        justify-content: left;
+        span {
+          margin-left: 0.5rem;
+          color: var(--neutral-80);
+        }
+      }
+
+      .field {
+        @apply mt-5;
+      }
+
+      .p-dropdown {
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .submit {
+        button {
+          @include button-filled;
+          @apply w-full;
+        }
+      }
+    }
+  }
+}

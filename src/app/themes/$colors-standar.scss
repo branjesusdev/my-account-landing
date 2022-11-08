@@ -1,0 +1,45 @@
+@import './$colors.scss';
+
+:root {
+
+  /* // INPUTS */
+
+  --input-focus : var(--secondary);
+  --input-error : var(--danger);
+  --input-outline : var(--neutral-60);
+
+  /* // CHECKBOX */
+
+  --checkbox-border : var(--neutral-60);
+  --checkbox-bg : var(--secondary);
+
+  /* // BUTTON */
+
+  --button-filled-bg : var(--primary);
+  --button-filled-hover : var(--secondary);
+  --button-filled-pressed : var(--secondary);
+  --button-filled-disabled : var(--gray-205);
+  --button-filled-color : white;
+
+  --button-outlined-bg : var(--white);
+  --button-outlined-hover : var(--purple-80);
+  --button-outlined-pressed-bg : var(--primary);
+  --button-outlined-pressed-color : var(--white);
+  --button-outlined-disabled : var(--gray-205);
+  --button-outlined-color : var(--primary);
+  --button-outlined-border : var(--primary);
+
+
+  /* // SPAN */
+
+  --span-error : var(--danger);
+  --span-balance : var(--secondary);
+
+  /* // TOAST */
+
+  --toast-error-title : var(--neutral-100);
+  --toast-error-subtitle : var(--neutral-100);
+  --toast-error-icon : var(--danger);
+
+
+}

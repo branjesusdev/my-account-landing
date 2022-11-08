@@ -1,0 +1,39 @@
+@import 'styles.scss';
+
+.app-profile-header {
+  @apply p-6 flex justify-between;
+  background-color: var(--neutral-40);
+  min-height: 80px;
+
+  .info {
+    h3 {
+      font-size: 14px;
+      font-family: nunito_bold;
+      font-weight: 700;
+      color: var(--primary)
+    }
+    h1 {
+      font-size: 18px;
+      font-family: nunito_semibold;
+      color: var(--neutral-100);
+    }
+  }
+
+  .actions {
+    @apply flex justify-between items-center;
+
+    button {
+      @include button-filled;
+      font-family: nunito_bold;
+      font-size: 14px !important;
+      @apply py-1 px-4 h-auto;
+      span {
+        @apply ml-5;
+      }
+
+    }
+    img {
+      @apply ml-4 h-[21px];
+    }
+  }
+}

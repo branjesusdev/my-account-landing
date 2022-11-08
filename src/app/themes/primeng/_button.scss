@@ -1,0 +1,29 @@
+::ng-deep {
+  .p-button {
+    background: var(--primary);
+    border: none;
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  .p-selectbutton .p-button.p-highlight {
+    background-color: var(--primary) !important;
+  }
+
+  .p-fileupload-choose:not(.p-disabled):hover {
+    background-color: var(--primary);
+  }
+
+  .p-fileupload-choose:not(.p-disabled):active {
+    background: var(--primary);
+  }
+
+  .p-button:enabled:active {
+    background: var(--primary);
+  }
+
+  .p-button:enabled:hover {
+    background: var(--primary);
+  }
+}

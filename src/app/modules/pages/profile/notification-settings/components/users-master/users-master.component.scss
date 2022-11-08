@@ -1,0 +1,8 @@
+@import 'styles.scss';
+
+:host ::ng-deep {
+  #app-users-master {
+    @include titleCard;
+  }
+
+}

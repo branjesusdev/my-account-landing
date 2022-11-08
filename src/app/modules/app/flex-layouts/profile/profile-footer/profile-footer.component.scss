@@ -1,0 +1,8 @@
+@import 'styles.scss';
+
+p {
+  @apply text-center text-sm my-3;
+  font-family: nunito_bold;
+  color: var(--primary);
+  font-weight: 700;
+}

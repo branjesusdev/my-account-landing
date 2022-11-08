@@ -1,0 +1,65 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "types": ["node"],
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "paths": {
+      "@environment" : ["src/environments/environment.ts"],
+      "@globals" : ["src/app/modules/shared/conf/globals.ts"],
+      "@conf/*" : ["src/app/modules/shared/conf/*"],
+
+      // APP
+
+      "@app/*" : ["src/app/modules/app/*"],
+
+      // Shared
+
+      "@shared/*" : ["src/app/modules/shared/*"],
+      "@shComponents/*" : ["src/app/modules/shared/components/*"],
+      "@shGuards/*" : ["src/app/modules/shared/guards/*"],
+      "@shDirectives/*" : ["src/app/modules/shared/directives/*"],
+      "@shInterceptors/*" : ["src/app/modules/shared/interceptors/*"],
+      "@shModels/*" : ["src/app/modules/shared/models/*"],
+      "@shModules/*" : ["src/app/modules/shared/modules/*"],
+      "@shPipes/*" : ["src/app/modules/shared/pipes/*"],
+      "@shServices/*" : ["src/app/modules/shared/services/*"],
+      "@shStore/*" : ["src/app/modules/shared/store/*"],
+
+      // Layouts
+
+      "@fxLayouts/*" : ["src/app/modules/app/flex-layouts/*"],
+
+      // Pages
+
+      "@pages/*" : ["src/app/modules/pages/*"],
+      "@profile/*" : ["src/app/modules/pages/profile/*"],
+      "@posts/*" : ["src/app/modules/pages/posts/*"],
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

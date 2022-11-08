@@ -1,0 +1,53 @@
+/*
+ ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗     ███████╗
+██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║     ██╔════╝
+██║  ███╗██║     ██║   ██║██████╔╝███████║██║     ███████╗
+██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║     ╚════██║
+╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗███████║
+ ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+*/
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './themes/$colors-standar.scss';
+@import './themes/_scrollbar.scss';
+@import './themes/_button.scss';
+@import './themes/_reset-form.scss';
+@import './themes/_text.scss';
+@import './themes/_alert.scss';
+@import './themes/_divider.scss';
+@import './themes/_font.scss';
+@import './themes/_shadow.scss';
+
+@import './themes/primeng/_input.scss';
+@import './themes/primeng/_autocomplete.scss';
+@import './themes/primeng/_toast.scss';
+@import './themes/primeng/_spinner.scss';
+@import './themes/primeng/_button.scss';
+@import './themes/primeng/_table.scss';
+@import './themes/primeng/_textarea.scss';
+@import './themes/primeng/_checkbox.scss';
+@import './themes/primeng/_single-selection.scss';
+
+@import './themes/pages/$default-icons.scss';
+@import './themes/pages/$default-table.scss';
+@import './themes/pages/$default-content.scss';
+
+* {
+  @include scrollbar;
+}
+
+*:not(span, i, h1, h2, h3, h4, h5, h6) {
+  font-family: nunito_regular;
+}
+
+:host ::ng-deep {
+  @include p-progressbar;
+}
+
+body {
+  background-color: transparent !important;
+  min-height: 100vmin;
+}

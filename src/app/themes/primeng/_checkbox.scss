@@ -1,0 +1,17 @@
+:host ::ng-deep {
+
+  .p-checkbox .p-checkbox-box {
+    border: 1px solid var(--checkbox-border) !important;
+  }
+
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none !important;
+  }
+
+  .p-checkbox .p-checkbox-box.p-highlight {
+    background-color: var(--checkbox-bg) !important;
+  }
+
+}

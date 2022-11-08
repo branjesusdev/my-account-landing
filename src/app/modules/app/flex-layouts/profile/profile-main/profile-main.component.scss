@@ -1,0 +1,10 @@
+@import 'styles.scss';
+
+:host ::ng-deep {
+  .app-main-profile {
+
+    @apply min-h-screen;
+    background-color: var(--neutral-20);
+
+  }
+}

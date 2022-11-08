@@ -1,0 +1,24 @@
+@mixin p-progressbar($color: var(--primary)) {
+  .p-progressbar {
+    height: 4px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 30 !important;
+
+    .p-progressbar-value {
+      background: $color;
+    }
+  }
+}
+
+@mixin p-progress-spinner {
+  .p-progress-spinner {
+    width: 100% !important;
+  }
+
+  .p-progress-spinner-circle {
+    stroke: var(--ocean-green-120) !important;
+  }
+}

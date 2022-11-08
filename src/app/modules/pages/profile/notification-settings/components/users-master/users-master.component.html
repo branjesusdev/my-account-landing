@@ -1,0 +1,4 @@
+<main id="app-users-master">
+  <app-users-header [permitCreated]="permitCreated" (recordsAdd)="usersRefresh = $event"></app-users-header>
+  <app-users-records [permitEdit]="permitEdit" [recordsRefresh]="usersRefresh"></app-users-records>
+</main>

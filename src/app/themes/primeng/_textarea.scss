@@ -1,0 +1,17 @@
+textarea {
+  outline: 0 none;
+  appearance: none;
+  outline-offset: 0;
+  border: 1px solid var(--gray-380);
+  padding: 0.75rem 0.75rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+  border-radius: 6px;
+
+  &:active,
+  &:focus,
+  &:enabled:hover {
+    border: 1px solid white !important;
+    box-shadow: 0 0 0 0.02rem var(--primary) !important;
+  }
+}

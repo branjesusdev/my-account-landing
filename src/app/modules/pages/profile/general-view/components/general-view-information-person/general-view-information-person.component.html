@@ -1,0 +1,83 @@
+<section class="app-general-view-information-person">
+  <h1>Información general</h1>
+
+  <form action="">
+
+    <div class="field">
+      <label for="">Nombres</label>
+      <input type="text" pInputText disabled value="Brandol">
+    </div>
+
+    <div class="field">
+      <label for="">Apellidos</label>
+      <input type="text" pInputText disabled value="Vargas">
+    </div>
+
+    <div class="field">
+      <label for="">Documento de identidad</label>
+      <input type="text" pInputText disabled value="Cédula de ciudadanía">
+    </div>
+
+    <div class="field">
+      <label for="">Número de documento de identidad</label>
+      <input type="text" pInputText disabled value="Carlos">
+    </div>
+
+    <div class="field">
+      <label for="">E-mail</label>
+      <input type="text" pInputText value="@gmail.com">
+    </div>
+
+    <div class="field">
+      <label for="">Celular</label>
+
+      <div class="flex space-x-2">
+        <p-dropdown
+          [(ngModel)]="selected"
+          [options]="phones"
+          optionLabel="name"
+          [filter]="true"
+          filterBy="name"
+          [showClear]="false"
+          name="phone">
+
+          <ng-template pTemplate="selectedItem">
+              <div class="flex items-center -mt-1" *ngIf="selected">
+                <img src="assets/icons/colombia-icon.png" [class]="'flag flag-' + selected.code.toLowerCase()"/>
+                  <div>{{selected.name}}</div>
+              </div>
+          </ng-template>
+
+          <ng-template let-phone pTemplate="item">
+              <div class="flex items-center">
+                  <img src="assets/icons/colombia-icon.png" [class]="'flag flag-' + phone.code.toLowerCase()"/>
+                  <div>{{phone.name}}</div>
+              </div>
+          </ng-template>
+
+      </p-dropdown>
+        <input type="number" pInputText value="3209821344">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="">Fecha de nacimiento</label>
+      <p-calendar [showIcon]="true" inputId="icon" name="date" [(ngModel)]="dateValue"></p-calendar>
+    </div>
+
+    <div class="field">
+      <label for="">Genero</label>
+      <p-selectButton [options]="[{ label : 'Hombre' }, { label : 'Mujer' }]">
+          <ng-template let-item>
+            {{ item.label }}
+          </ng-template>
+      </p-selectButton>
+    </div>
+
+    <div class="field submit">
+      <button pButton pRipple label="Editar"></button>
+    </div>
+
+  </form>
+
+</section>

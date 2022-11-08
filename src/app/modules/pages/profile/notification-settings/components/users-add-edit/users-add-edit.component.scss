@@ -1,0 +1,22 @@
+@import "styles.scss";
+
+:host ::ng-deep {
+  .dialog-users-add-edit {
+      .p-dropdown,
+      .p-inputtext,
+      .p-inputnumber,
+      p-inputnumber {
+        @apply w-full;
+      }
+
+      .field {
+        @apply mt-5;
+      }
+
+      button {
+        @apply float-right w-36 mr-3;
+      }
+
+
+  }
+}

@@ -1,0 +1,74 @@
+@mixin table-sm {
+  .p-datatable .p-sortable-column:focus {
+    box-shadow: var(--purple-80) !important;
+  }
+
+  .p-datatable-table {
+    font-size: 13px !important;
+  }
+
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem 0.5rem !important;
+
+    button {
+      background-color: transparent;
+      color: var(--primary);
+    }
+  }
+
+  .p-datatable-thead {
+    tr {
+      input {
+        padding: 0.3rem 0.5rem !important;
+      }
+    }
+  }
+
+  .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+    outline: transparent !important;
+    color: var(--ocean-green-120) !important;
+  }
+
+  .p-datatable .p-sortable-column.p-highlight {
+    color: var(--ocean-green-120) !important;
+  }
+
+  .p-datatable .p-datatable-tbody > tr:focus {
+    outline: 0.1rem solid var(--ocean-green-120) !important;
+  }
+
+  .p-datatable .p-datatable-tbody > tr.p-highlight {
+    color: var(--ocean-green-120) !important;
+    background: var(--ocean-green-5) !important;
+  }
+
+  .p-paginator {
+    .p-paginator-pages .p-paginator-page.p-highlight {
+      border-color: var(--primary);
+    }
+
+    .p-link:focus {
+      box-shadow: var(--purple-80) !important;
+    }
+  }
+}
+
+@mixin table-primary-end {
+  .table-primary-end {
+    .p-datatable {
+      @apply mx-auto my-12 md:mt-8;
+      @apply w-9/12 sm:w-8/12 md:w-10/12;
+
+      table {
+        tr > td {
+          color: var(--ocean-green-100) !important;
+          @apply px-3 py-2 md:px-8 md:py-4;
+          &:last-child {
+            color: var(--ocean-green-100) !important;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

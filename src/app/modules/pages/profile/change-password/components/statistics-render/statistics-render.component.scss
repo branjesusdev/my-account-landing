@@ -1,0 +1,10 @@
+@import 'styles.scss';
+
+:host ::ng-deep {
+  #app-statistics-render {
+    iframe {
+      @apply mx-auto w-full min-h-[70vh];
+    }
+  }
+
+}
