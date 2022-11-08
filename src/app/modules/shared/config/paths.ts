@@ -1,44 +1,19 @@
 import { environment } from "@environment"
 
 export const ENVIRONMENT_DEV = {
-  // IP_DEFAULT : 'https://mdn.mocklab.io/'
-  IP_DEFAULT : 'http://demo4294298.mockable.io/'
+  IP_DEFAULT : 'https://jsonplaceholder.typicode.com/'
 }
 
 export const ENVIRONMENT_PROD = {
   IP_DEFAULT : ''
 }
 
-export const BASE_URL = 'api/mdn/';
 export const PATHS = {
 
+  // posts
 
-
-  // Entidades
-
-  GET_ENTITYS_PUBLICS : BASE_URL + 'entitys',
-
-  // Autenticación
-
-  POST_AUTHENTICATION : BASE_URL + 'authentication',
-
-  // Users
-
-  GET_ALL_USERS : BASE_URL + 'allUsers',
-  POST_SAVE_USER : BASE_URL + 'saveUser',
-  UPDATE_USER : BASE_URL + 'updateUser/${id}',
-
-  // parametros
-
-  GET_ALL_PARAMETERS : BASE_URL + 'allParamsAndSubparams',
-  SAVE_PARAMETER : BASE_URL + 'saveParameter',
-  SAVE_SUB_PARAMETER : BASE_URL + 'saveSubParameter',
-  UPDATE_SUB_PARAMETER : BASE_URL + 'updateSubParameter/{idSubParametro}',
-  GET_POWER_BI: BASE_URL + 'getPowerBI',
-
-  // Secuencia
-
-  GET_SEQUENCE_BY_ENTITY : BASE_URL + 'secuence/${idEntity}'
+  GET_POSTS : 'posts',
+  SAVE_POST : 'posts',
 }
 
 

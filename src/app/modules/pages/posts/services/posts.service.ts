@@ -3,24 +3,26 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { retry, tap } from 'rxjs/operators';
 
-import { OutResponse } from '@shared/models/out/out-response.interface';
-import { AuthenticationUser } from '@shared/models/default/authentication';
+// RESOURCES
 
+import { OutResponse } from '@shared/models/out/out-response.interface';
 import { PATHS } from '@shared/config/paths';
 
-import { InAuthentication } from '@auth/models/in/in-authentication';
+// ENTITYS
+
+import { OutPost } from '@posts/models/out/out-post';
+import { InPosts } from '@posts/models/in/in-post'
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthLoginService {
+export class PostsService {
 
   constructor(private _HTTP: HttpClient) {}
 
-  postAuthentication( request : InAuthentication ): Observable<OutResponse<AuthenticationUser>> {
-    const url: string = `${ PATHS.POST_AUTHENTICATION}`;
-    const headers = new HttpHeaders().append('skipt', 'true');
-    return this._HTTP.post<OutResponse<AuthenticationUser>>(url, request, {headers}).pipe(
+  getPosts( request : InPosts ): Observable<OutResponse<OutPost>> {
+    const url: string = `${ PATHS.GET_POSTS }`;
+    return this._HTTP.post<OutResponse<OutPost>>(url, request).pipe(
       retry(2)
     );
   }
