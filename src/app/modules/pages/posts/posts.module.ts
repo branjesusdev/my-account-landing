@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 
 // RESOURCES
 
-import { SharedModule } from '@shared/shared.module';
-import { MessageService } from 'primeng/api';
-
-
 import { PostsRoutingModule } from '@posts/posts-routing.module';
+import { SharedModule } from '@shared/shared.module';
+import { InterceptorService } from '@shared/interceptors/interceptor.service'
 
 // COMPONENTS
 
@@ -29,6 +28,6 @@ import { PostsRecordsComponent } from '@posts/components/posts-records/posts-rec
 
     SharedModule
   ],
-  providers: [MessageService]
+  providers: [MessageService, InterceptorService]
 })
 export class PostsModule { }
